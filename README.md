@@ -19,7 +19,7 @@ Each project requires the firebase package for the frontend, and a firebase `web
 
 `npm install firebase`
 
-The firebase package is installed within the node_modules folder and gives us access to import any of te firebase services
+The firebase package is installed within the node_modules folder and gives us access to import any of the firebase services
 
 ## Configuration Object
 
