@@ -1,6 +1,6 @@
-# GET request 
+# Fetch request (Grabbing a whole collection) 
 
-**GET request pattern using firestore**
+**Fetch request pattern using firestore**
 
 We are importing into the file we make the request from:
 
@@ -18,4 +18,11 @@ So far we have grabbed the collection object for `posts`, to get access to the a
 
 ![Screenshot from 2021-03-07 04-37-43](https://user-images.githubusercontent.com/73107656/110229135-27894580-7eff-11eb-9c9d-b2ecff488316.png)
 
+# Fetch request (Grabbing a single document)
+
+Similar to grabbing the whole collection, the pattern for grabbing a single post also sits within the `try` block.
+
+We have access to the post id as it is passed into the `getPost` function, we add `.doc(id)` before `.get()` in the `const res`.  This allows us to connect to the posts collection, grab the post document that matches the id. We do not need to use map as we are not cycling through an array, we just need to assign an object to `post.value` and spread the data and id in. This time we also utilise the `exists` property on the document object which returns a boolean to throw an error if the post id does not exist. Here is the pattern:
+
+![Screenshot from 2021-03-07 05-44-42](https://user-images.githubusercontent.com/73107656/110230333-3cb6a200-7f08-11eb-81ff-e0483a2acdad.png)
 
