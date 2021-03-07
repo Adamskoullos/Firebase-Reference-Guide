@@ -2,12 +2,12 @@
 
 Toc:
 
-[Setting Up](#Setting-Up)
-[Firestore](#)
-[Cloud Functions]()
-[Authentication]()
-[Rules](#)
-[Hosting](#)
+[Setting Up](#Setting-Up)<br>
+[Firestore](#)<br>
+[Cloud Functions]()<br>
+[Authentication]()<br>
+[Rules](#)<br>
+[Hosting](#)<br>
 
 ----------------------------------------
 
