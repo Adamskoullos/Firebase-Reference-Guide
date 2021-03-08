@@ -30,6 +30,29 @@ We have access to the post id as it is passed into the `getPost` function, we ad
 
 ## Adding a document to the database from the front end
 
-First within the async function we create an object for the new document and save it to a const. We then create a resolve const and assign it the returned value of the await request. The request starts by targeting the firestore collection, then adding `.add(obj)` to the end passing in the object to create the new database document from:
+First within the async function we create an object for the new document and save it to a const. We then create a resolve const and assign it the returned value of the await request. The request starts by targeting the firestore collection, then adding `.add(obj)` to the end passing in the object to create the new database document from.  Make sure to hit enter when typing the firestore service `fStore` so Vue adds the import to the file:
+
+![Screenshot from 2021-03-08 02-02-15](https://user-images.githubusercontent.com/73107656/110264928-5280a180-7fb2-11eb-9be5-472e9ea5492c.png)
 
 ![Screenshot from 2021-03-08 01-46-24](https://user-images.githubusercontent.com/73107656/110263979-1c422280-7fb0-11eb-8837-2bfde2fcdfd8.png)
+
+# Deleting a document
+
+1. Add a button with a click event listener on the view we want to make the delete from, in this instance it will be the individual post view for a blog post
+
+![Screenshot from 2021-03-08 02-27-21](https://user-images.githubusercontent.com/73107656/110266494-d38d6800-7fb5-11eb-9e56-614aa97687b2.png)
+
+2. Define the function within the `setup()` function
+
+- Make the function `async`
+- target the firestore collection, then the post by `id` within the firestore collection using `await` and add `delete()` to the end
+    - Note here that we can target the id by either `props.id` as we have it or as we have imported and saved `useRoute` to `route` we can use `route.params.id` which i have done here
+- Re-route the user back to the home view in this case the main blog page. We use the vue-router for this so we need to:
+    - Save the router to a const `const router = useRouter()`
+    - auto import `useRouter` as we do this
+    - Use the `router.push()` method to redirect the user
+
+4. Add the function to the `setup()` function returned object so the template has access to it
+
+![Screenshot from 2021-03-08 02-41-25](https://user-images.githubusercontent.com/73107656/110267475-cb362c80-7fb7-11eb-9cd2-92ea91b71a52.png)
+
