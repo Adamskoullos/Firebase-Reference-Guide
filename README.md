@@ -3,7 +3,7 @@
 Toc:
 
 [Setting Up](#Setting-Up)<br>
-[Firestore](https://github.com/Adamskoullos/Firebase-Reference-Guide/blob/master/firestore/firestore.md)<br>
+[Firestore](https://github.com/Adamskoullos/Firebase-Reference-Guide/blob/master/firebase/firestore.md)<br>
 [Cloud Functions]()<br>
 [Authentication]()<br>
 [Rules](#)<br>
