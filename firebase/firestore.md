@@ -26,3 +26,10 @@ We have access to the post id as it is passed into the `getPost` function, we ad
 
 ![Screenshot from 2021-03-07 05-56-08](https://user-images.githubusercontent.com/73107656/110230571-d6328380-7f09-11eb-88d7-5e6a0dfedf48.png)
 
+# Creating a new document
+
+## Adding a document to the database from the front end
+
+First within the async function we create an object for the new document and save it to a const. We then create a resolve const and assign it the returned value of the await request. The request starts by targeting the firestore collection, then adding `.add(obj)` to the end passing in the object to create the new database document from:
+
+![Screenshot from 2021-03-08 01-46-24](https://user-images.githubusercontent.com/73107656/110263979-1c422280-7fb0-11eb-8837-2bfde2fcdfd8.png)
