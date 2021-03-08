@@ -64,13 +64,23 @@ Firebase has a timestamp data type that can be used as a field value within a do
 
 ![Screenshot from 2021-03-08 04-05-59](https://user-images.githubusercontent.com/73107656/110273051-9e881200-7fc3-11eb-82ae-167ce423aac7.png)
 
-Above, the `serverTimestamp` returns a function that is used as the field value
+Above, the `serverTimestamp` returns a function that is used as the field value. Also add to export object.
 
-2. Add the `timestamp()` function as the value to the `createdAt` document property within the function that creates new documents and sends them to the db:
+2. Add the `timestamp()` function as the value to the `createdAt` document property within the function that creates new documents and sends them to the db. Press enter so Vue auto-imports the `timestamp()` function:
 
 ![Screenshot from 2021-03-08 04-14-37](https://user-images.githubusercontent.com/73107656/110273583-d04da880-7fc4-11eb-903b-4e5fba9b1903.png)
 
 ![Screenshot from 2021-03-08 04-15-14](https://user-images.githubusercontent.com/73107656/110273640-e8252c80-7fc4-11eb-8543-2bc8b8252a96.png)
 
-Now we have a timestamp for each document, we can organise them in date order (ascending or descending)
+Now we have a timestamp for each document that is created, we can organise them in date order (ascending or descending)
+
+# Order collection documents 
+
+Documents can be ordered at the point the fetch request is made to firebase and they can be ordered by any document properties either alphabetically or by date if we use the timestamp.  This can be either ascending or descending.  We need to use the keyword `orderBy()`. The first argument is the `property` to use and the second is `asc` or `desc`. 
+
+The example below orders the documents as the collection is fetched. So to show the newest documents/posts first we use `desc`:
+
+![Screenshot from 2021-03-08 04-41-03](https://user-images.githubusercontent.com/73107656/110275194-81097700-7fc8-11eb-9dc1-b970fc54c46e.png)
+
+
 
