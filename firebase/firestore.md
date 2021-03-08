@@ -56,3 +56,21 @@ First within the async function we create an object for the new document and sav
 
 ![Screenshot from 2021-03-08 02-41-25](https://user-images.githubusercontent.com/73107656/110267475-cb362c80-7fb7-11eb-9cd2-92ea91b71a52.png)
 
+# TimeStamp - Adding a 'created at' timestamp to each document
+
+Firebase has a timestamp data type that can be used as a field value within a document, just like booleans, strings etc.  To get access to the data type we have to set it up within the `config.js` file, run the firebase timestamp method and save the returned function so we can use it as a `field value` to grab the timestamp for each document when they are created:
+
+1. `config.js` - Initialise the firebase timestamp data type and save it to a const:
+
+![Screenshot from 2021-03-08 04-05-59](https://user-images.githubusercontent.com/73107656/110273051-9e881200-7fc3-11eb-82ae-167ce423aac7.png)
+
+Above, the `serverTimestamp` returns a function that is used as the field value
+
+2. Add the `timestamp()` function as the value to the `createdAt` document property within the function that creates new documents and sends them to the db:
+
+![Screenshot from 2021-03-08 04-14-37](https://user-images.githubusercontent.com/73107656/110273583-d04da880-7fc4-11eb-903b-4e5fba9b1903.png)
+
+![Screenshot from 2021-03-08 04-15-14](https://user-images.githubusercontent.com/73107656/110273640-e8252c80-7fc4-11eb-8543-2bc8b8252a96.png)
+
+Now we have a timestamp for each document, we can organise them in date order (ascending or descending)
+
