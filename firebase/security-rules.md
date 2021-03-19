@@ -30,7 +30,7 @@ The below example shows the pattern to only allow read and write access if the u
 
 To do this sign into `console.developers.google.com` select the firebase project > credentials > API key:
 
-Click on the API key and scroll down, click on `HTTP referres (website)` and then add the firebase domain:
+Click on the API key and scroll down, click on `HTTP refers (website)` and then add the firebase domain:
 
 ![Screenshot from 2021-03-12 07-50-06](https://user-images.githubusercontent.com/73107656/110909094-956eac00-8307-11eb-812a-e29100a4c325.png)
 
